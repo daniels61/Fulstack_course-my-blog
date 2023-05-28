@@ -1,0 +1,49 @@
+.navbar {
+    overflow: hidden;
+    background-color: #00213b;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.right-align {
+    float: right;
+}
+
+.frame {
+    border: 2px solid #333; /* set border width and color */
+    padding: 10px; /* add some padding for spacing */
+    border-radius: 10px; /* add rounded corners */
+    box-shadow: 5px 5px 5px #888; /* add shadow effect */
+    background-color: #f5f5f5; /* set background color */
+    text-align: left; /* center the contents of the frame */
+    width: 60%; /* set the width of the frame to 100% */
+
+}
+.frame #picture_frame {
+    float: right ; /* float the picture to the right */
+    margin-left: 20px; /* add some margin to separate it from the text */
+    margin-top: 0px; /* add some space between the picture and text */
+    width: 100px; /* set the width of the picture */
+    height: 100px; /* set the height of the picture */
+    vertical-align: center;
+    border: 2px solid #333; /* set border width and color */
+    border-radius: 10px; /* add rounded corners */
+}
+.frame p {
+    font-size: 16px; /* set font size */
+    color: #333; /* set font color */
+    line-height: 1.5; /* set line height */
+    margin: 2px; /* remove default margins */
+
+}
+.right {
+    position: absolute;
+    top: 110px;
+    right: 150px;
+}

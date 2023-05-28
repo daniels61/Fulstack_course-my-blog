@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather in some city</title>
+    <style>
+        html{
+            background-color: #ffb3b3;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Weather in {{city_for_html}}!</h1>
+    {% if is_hot_for_html %}
+    <h2>There is +{{deg}}. So it's hot!</h2>
+    {% else %}
+    <h2>There is {{deg}}. So it's cold!</h2>
+    {% endif %}
+    <img src="{{ img_for_weather }}" alt="Weather Image">
+</body>
+</html>

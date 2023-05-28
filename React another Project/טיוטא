@@ -1,0 +1,39 @@
+import React from "react";
+import axios from "axios";
+
+class Weather extends React.Component{
+constructor(props){
+
+  super(props);
+  this.state={
+    name:this.props.name || 'New york', Weather:{}
+  };
+}
+
+componentDidMount(){
+const name = this.state.name;
+const apiKey = 'api key'
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&appid=${apiKey}'
+axios.get(url)
+.then(res =>{
+  console.log(res)
+  if(res.status === 200){
+    const weather = res.data;
+    this.setState({weather});
+  }
+})
+}
+render() {
+  const {name, weather} = this.state;
+  if (weather.main){
+    return (<>
+     <h1>{name}</h1>
+      <div>{weather.main.temp} </div>
+      <div>{weather.main.feels_like} </div>
+    </>)
+  }
+  
+}
+}
+
+export default Weather;
