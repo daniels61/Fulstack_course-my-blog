@@ -6,8 +6,10 @@ import { Routes, Route } from "react-router-dom";
 import Contact from './pages/Contact';
 import NewPost from './pages/NewPost';
 import PostById from './pages/PostById'
-import SignIn from './components/SignIn';
+// import SignIn from './components/SignIn';
 import PostList from './pages/PostList';
+import Applogin from "./pages/Applogin";
+
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
         <Route path="new_post" element={<NewPost/>} />
         <Route path="/posts" element={<PostList/>} />
 
-        <Route path="login" element={<SignIn/>} />
+        <Route path="login" element={<Applogin/>} />
       </Route>
     </Routes>
   
