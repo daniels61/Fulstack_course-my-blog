@@ -12,10 +12,6 @@ export default class PostList extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.getAllPosts();
-  }
-
   getAllPosts = () => {
     const url = '/posts';
     axios.get(url)
@@ -25,12 +21,7 @@ export default class PostList extends React.Component {
           resp: null
         });
       })
-    //   .catch((err) => {
-    //     this.setState({
-    //       posts: [],
-    //       resp: 'Error: Failed to fetch posts.'
-    //     });
-    //   });
+
   }
 
   addPost = () => {
@@ -43,8 +34,7 @@ export default class PostList extends React.Component {
     axios.post(url, data)
       .then((res) => {
         this.setState({
-          title: '',
-          body: '',
+         data: [],
           resp: 'Success: Post added successfully.'
         });
         this.getAllPosts();
@@ -67,10 +57,12 @@ export default class PostList extends React.Component {
     return (
       <div>
         <button onClick={this.getAllPosts}>Get All Posts</button>
-        <br />
+        <br/><br/><br/>
 
         <input type="text" name="title" value={title} onChange={this.handleInputChange} placeholder="Post Title" />
+        <br/>
         <input type="text" name="body" value={body} onChange={this.handleInputChange} placeholder="Post Body" />
+        <br/>
         <button onClick={this.addPost}>Add Post</button>
 
         <div>{resp ? resp : null}</div>
